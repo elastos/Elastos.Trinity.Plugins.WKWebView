@@ -24,6 +24,8 @@
 
 #import <objc/message.h>
 
+#import "Elastos-Swift.h"
+
 #define CDV_BRIDGE_NAME @"cordova"
 #define CDV_WKWEBVIEW_FILE_URL_LOAD_SELECTOR @"loadFileURL:allowingReadAccessToURL:"
 
@@ -94,6 +96,13 @@
 
     WKWebViewConfiguration* configuration = [self createConfigurationFromSettings:settings];
     configuration.userContentController = userContentController;
+    
+    if (@available(iOS 11.0, *)) {
+        [configuration setURLSchemeHandler:[AssetsSchemeHandler alloc] forURLScheme:@"assets"];
+        [configuration setURLSchemeHandler:[TrinitySchemeHandler alloc] forURLScheme:@"trinity"];
+    } else {
+        // Fallback on earlier versions
+    }
 
     // re-create WKWebView, since we need to update configuration
     WKWebView* wkWebView = [[WKWebView alloc] initWithFrame:self.engineWebView.frame configuration:configuration];

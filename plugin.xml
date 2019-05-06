@@ -22,13 +22,13 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-wkwebview-engine"
+    id="elastos-trinity-plugins-wkwebview-engine"
     version="1.1.5-dev">
-    <name>Cordova WKWebView Engine</name>
+    <name>Trinity WKWebView Engine</name>
     <description>Cordova WKWebView Engine Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,wkwebview,webview</keywords>
-    <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugin-wkwebview-engine.git</repo>
+    <repo>https://github.com/elastos/Elastos.Trinity.Plugins.WKWebView.git</repo>
 
 	<engines>
         <engine name="cordova-ios" version=">=4.0.0-dev" />
@@ -60,5 +60,7 @@
         <source-file src="src/ios/CDVWKWebViewUIDelegate.m" />
         <header-file src="src/ios/CDVWKProcessPoolFactory.h" />
         <source-file src="src/ios/CDVWKProcessPoolFactory.m" />
+        <source-file src="src/ios/AssetsSchemeHandler.swift" />
+        <source-file src="src/ios/TrinitySchemeHandler.swift" />
     </platform>
 </plugin>
