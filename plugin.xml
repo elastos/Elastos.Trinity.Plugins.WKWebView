@@ -25,9 +25,9 @@
     id="elastos-trinity-plugins-wkwebview-engine"
     version="1.1.5-dev">
     <name>Trinity WKWebView Engine</name>
-    <description>Cordova WKWebView Engine Plugin</description>
+    <description>Elastos Trinity WKWebView Engine Plugin</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,wkwebview,webview</keywords>
+    <keywords>elastos,trintiy,cordova,wkwebview,webview</keywords>
     <repo>https://github.com/elastos/Elastos.Trinity.Plugins.WKWebView.git</repo>
 
 	<engines>
